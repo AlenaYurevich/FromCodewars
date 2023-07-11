@@ -39,18 +39,30 @@
 
 
 # When provided with a number between 0-9, return it in words.
-def switch_it_up(number):
-    match number:
-        case 0: return "Zero"
-        case 1: return "One"
-        case 2: return "Two"
-        case 3: return "Three"
-        case 4: return "Four"
-        case 5: return "Five"
-        case 6: return "Six"
-        case 7: return "Seven"
-        case 8: return "Eight"
-        case 9: return "Nine"
+
+# Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the
+# input parameters, including them.
+# def between(a, b):
+#     return list(range(a, b + 1))
 
 
-print(switch_it_up(8))
+# print(between(2, 8))
+
+
+# Your task is to return the number of people who are still on the bus after the last bus stop
+# (after the last array). Even though it is the last bus stop, the bus might not be empty and some people might
+# still be inside the bus, they are probably sleeping there
+# def number(bus_stops):
+#     return sum(i[0] - i[1] for i in bus_stops)
+#
+#
+# print(number([[10, 0], [3, 5], [5, 8]]))
+#
+#
+# Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+def correct(s):
+    return s.replace('5', 'S').replace('0', 'O').replace('1', 'I')
+
+
+print(correct("L0ND0N"))
+print(correct("51NGAP0RE"))
