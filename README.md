@@ -1,3 +1,3 @@
 # FromCodewars
-Hi, friens
+Hi, friendsa!
 There are some interesting examples of using  python methods from Codewars.com
