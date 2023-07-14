@@ -23,12 +23,44 @@
 # You are going to be given a word. Your job is to return the middle character of the word. If the word's length
 # is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
-def get_middle(s):
-    ind = int(len(s) / 2)
-    if len(s) % 2 == 0:
-        return s[ind - 1] + s[ind]
-    else:
-        return s[ind]
+# def get_middle(s):
+#     ind = int(len(s) / 2)
+#     if len(s) % 2 == 0:
+#         return s[ind - 1] + s[ind]
+#     else:
+#         return s[ind]
+#
+#
+# print(get_middle("ah"))
+
+# Your task is to write a function which returns the sum of a sequence of integers.
+# def sequence_sum(begin_number, end_number, step):
+#     return sum(range(begin_number, end_number + 1, step))
+#
+#
+# print(sequence_sum(16, 15, 3))
 
 
-print(get_middle("ah"))
+# As a part of this Kata, you need to create a function that when provided with a
+# triplet, returns the index of the numerical element that lies between the other
+# two elements.
+# def gimme(input_array):
+#     res = sorted(input_array)[1]
+#     return input_array.index(sorted(input_array)[1])
+#
+#
+# print(gimme([-0.410, -23, 4]))
+
+# to make two functions ( max and min, that receive a list of integers as input,
+# and return the largest and lowest number in that list, respectively
+def minimum(arr):
+    return min(arr)
+
+
+def maximum(arr):
+    return max(arr)
+
+
+print(minimum([-52, 56, 30, 29, -54, 0, -110]))
+print(maximum([-52]))
+
