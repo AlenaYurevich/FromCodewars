@@ -53,14 +53,41 @@
 
 # to make two functions ( max and min, that receive a list of integers as input,
 # and return the largest and lowest number in that list, respectively
-def minimum(arr):
-    return min(arr)
+# def minimum(arr):
+#     return min(arr)
+#
+#
+# def maximum(arr):
+#     return max(arr)
+#
+#
+# print(minimum([-52, 56, 30, 29, -54, 0, -110]))
+# print(maximum([-52]))
 
 
-def maximum(arr):
-    return max(arr)
+# Given an array of integers, find the one that appears an odd number of times.
+def find_it(seq):
+    for i in seq:
+        if seq.count(i) % 2 != 0:
+            return i
 
 
-print(minimum([-52, 56, 30, 29, -54, 0, -110]))
-print(maximum([-52]))
+# print(find_it([20, 1, -1,  2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]))
 
+
+# Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case
+# insensitive. The string can contain any char.
+def xo(s):
+    s = s.lower()
+    return s.count("x") == s.count("o")
+
+
+# print(xo("ooxXm"))
+
+# Write a program that finds the summation of every number from 1 to num. The number will always
+# be a positive integer greater than 0.
+def summation(num):
+    return sum(range(num + 1))
+
+
+# print(summation(22))
