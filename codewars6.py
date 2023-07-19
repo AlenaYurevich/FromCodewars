@@ -10,7 +10,7 @@
 #
 # print(duplicate_encode('WaWt)K uZkcf'))
 
-# function that will return true if the walk the app gives you will
+# function that will return true if this walk the app gives you will
 # take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your
 # starting point. Return false otherwise.
 # def is_valid_walk(walk):
@@ -75,8 +75,8 @@ def find_it(seq):
 # print(find_it([20, 1, -1,  2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]))
 
 
-# Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case
-# insensitive. The string can contain any char.
+# Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be
+# case-insensitive. The string can contain any char.
 def xo(s):
     s = s.lower()
     return s.count("x") == s.count("o")
@@ -91,3 +91,33 @@ def summation(num):
 
 
 # print(summation(22))
+
+
+# Write a 'welcome' function that takes a parameter 'language'
+# (always a string), and returns a greeting - if you have it
+# in your database. It should default to English if the language is not in the database,
+# or in the event of an invalid input.
+database = {'english': 'Welcome',
+            'czech': 'Vitejte',
+            'danish': 'Velkomst',
+            'dutch': 'Welkom',
+            'estonian': 'Tere tulemast',
+            'finnish': 'Tervetuloa',
+            'flemish': 'Welgekomen',
+            'french': 'Bienvenue',
+            'german': 'Willkommen',
+            'irish': 'Failte',
+            'italian': 'Benvenuto',
+            'latvian': 'Gaidits',
+            'lithuanian': 'Laukiamas',
+            'polish': 'Witamy',
+            'spanish': 'Bienvenido',
+            'swedish': 'Valkommen',
+            'welsh': 'Croeso'}
+
+
+def greet(language):
+    return database.get(language, "Welcome")
+
+
+print(greet('kmlknmklnm'))
