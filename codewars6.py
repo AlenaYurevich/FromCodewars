@@ -130,9 +130,23 @@ def greet(language):
 
 def two_sum(numbers, target):
     for i in numbers:
-        if target - i in numbers:
+        if tar      get - i in numbers:
             return numbers.index(i)
 
 
+# print(two_sum([2, 2, 3], 4))
 
-print(two_sum([2, 2, 3], 4))
+
+# Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+def remove_url_anchor(url):
+    return url.split("#")[0]
+
+
+# print(remove_url_anchor("www.codewars.com#about"))
+# print(remove_url_anchor("www.codewars.com?page=1"))
+
+
+
+
+
+
