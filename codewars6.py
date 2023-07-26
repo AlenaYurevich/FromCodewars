@@ -120,4 +120,19 @@ def greet(language):
     return database.get(language, "Welcome")
 
 
-print(greet('kmlknmklnm'))
+# print(greet('kmlknmklnm'))
+
+# Write a function that takes an array of numbers (integers for the tests)
+# and a target number. It should find two different items in the array
+# that, when added together, give the target value. The indices of these
+# items should then be returned in a tuple / list
+
+
+def two_sum(numbers, target):
+    for i in numbers:
+        if target - i in numbers:
+            return numbers.index(i)
+
+
+
+print(two_sum([2, 2, 3], 4))
