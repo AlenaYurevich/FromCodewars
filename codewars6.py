@@ -130,7 +130,7 @@ def greet(language):
 
 def two_sum(numbers, target):
     for i in numbers:
-        if tar      get - i in numbers:
+        if target - i in numbers:
             return numbers.index(i)
 
 
@@ -145,8 +145,22 @@ def remove_url_anchor(url):
 # print(remove_url_anchor("www.codewars.com#about"))
 # print(remove_url_anchor("www.codewars.com?page=1"))
 
+# Complete the solution so that it returns true if the first argument(string) passed in ends
+# with the 2nd argument (also a string).
+
+def solution(text, ending):
+    return text.endswith(ending)
+
+# Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple
+# elements with the same value, remove the one with the lowest index. If you get an empty array/list, return an empty
+# array/list. Don't change the order of the elements that are left.Given an array of integers, remove the smallest value
+# Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with the
+# lowest index. If you get an empty array/list, return an empty array/list.
+# Don't change the order of the elements that are left.
 
 
-
-
-
+def remove_smallest(numbers):
+    a = numbers[:]
+    if a:
+        a.remove(min(a))
+    return a
