@@ -164,3 +164,44 @@ def remove_smallest(numbers):
     if a:
         a.remove(min(a))
     return a
+
+
+# In this little assignment you are given a string of space separated numbers, and have to return the highest and
+# lowest number.
+def high_and_low(numbers):
+    res = [int(num) for num in numbers.split(" ")]
+    return f"{max(res)} {min(res)}"
+
+
+# Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+
+
+def grow(arr):
+    res = 1
+    for num in arr:
+        res *= num
+    return res
+
+
+# Write a function that always returns 5#
+# Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+
+
+def unusual_five():
+    s = "eeeee"
+    return s.count("e")
+
+
+# Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend
+# to be sheep. Fortunately, you are good at spotting them.
+# Warn the sheep in front of the wolf that it is about to be eaten. Remember that you are standing at the front of the
+# queue which is at the end of the array:
+
+
+def warn_the_sheep(queue):
+    queue.reverse()
+    c = queue.index("wolf")
+    if c == 0:
+        return 'Pls go away and stop eating my sheep'
+    else:
+        return f"Oi! Sheep number {queue.index('wolf')}! You are about to be eaten by a wolf!"
