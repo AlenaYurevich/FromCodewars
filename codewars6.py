@@ -227,3 +227,35 @@ def likes(names):
         case [a, b]: return f'{a} and {b} like this'
         case [a, b, c]: return f'{a}, {b} and {c} like this'
         case [a, b, *rest]: return f'{a}, {b} and {len(rest)} others like this'
+
+
+"""
+Write a function that returns a string in which firstname is swapped with last name.
+Example(Input --> Output)
+"john McClane" --> "McClane john"
+"""
+
+
+def name_shuffler(str_):
+    return ' '.join(str_.split(' ')[::-1])
+
+
+"""
+Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which
+is the number of times you must multiply the digits in num until you reach a single digit.
+"""
+
+
+def persistence(n):
+    counter = 0
+    num = str(n)
+    while len(num) > 1:
+        res = 1
+        for i in num:
+            res *= int(i)
+        num = str(res)
+        counter += 1
+    return counter
+
+
+print(persistence(999))
