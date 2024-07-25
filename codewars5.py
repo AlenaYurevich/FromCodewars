@@ -60,3 +60,13 @@ print(result)
 
 result = re.findall(r'[Т,т]ариф.+', 'Сумма, Тариф и тарифы изменяются по тарифной политике')
 print(result)
+
+"""
+Create a function which translates a given DNA string into RNA.
+For example:
+"GCAT"  =>  "GCAU"
+"""
+
+
+def dna_to_rna(dna):
+    return dna.replace("T", "U")
