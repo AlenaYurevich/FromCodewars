@@ -70,3 +70,26 @@ For example:
 
 def dna_to_rna(dna):
     return dna.replace("T", "U")
+
+
+"""
+Count the number of divisors of a positive integer n.
+"""
+
+
+def divisors(n):
+    return sum([1 for i in range(1, int(n/2) + 1) if n % i == 0]) + 1
+
+
+print(divisors(30))
+
+
+"""
+Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+Write a function which takes a list of strings and returns each line prepended by the correct number.
+The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+"""
+
+
+def number(lines):
+    return [f'{count}: {value}' for count, value in enumerate(lines, 1)]
