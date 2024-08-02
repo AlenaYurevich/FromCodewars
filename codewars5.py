@@ -81,9 +81,6 @@ def divisors(n):
     return sum([1 for i in range(1, int(n/2) + 1) if n % i == 0]) + 1
 
 
-print(divisors(30))
-
-
 """
 Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
 Write a function which takes a list of strings and returns each line prepended by the correct number.
@@ -93,3 +90,33 @@ The numbering starts at 1. The format is n: string. Notice the colon and space i
 
 def number(lines):
     return [f'{count}: {value}' for count, value in enumerate(lines, 1)]
+
+
+"""
+You need to return a string that looks like a diamond shape when printed on the screen, using asterisk (*) characters.
+Trailing spaces should be removed, and every line must be terminated with a newline character (\n).
+"""
+
+
+def diamond(n):
+    res = None
+    if n > 0 and n % 2 != 0:
+        res = ""
+        ws = n // 2
+        for i in range(1, n + 1, 2):
+            res += " " * ws
+            res += '*' * i
+            res += '\n'
+            ws -= 1
+        ws += 2
+        for i in range(n - 2, 0, -2):
+            res += " " * ws
+            res += '*' * i
+            res += '\n'
+            ws += 1
+    return res
+
+
+print(diamond(3))
+print(diamond(5))
+print(diamond(1))
