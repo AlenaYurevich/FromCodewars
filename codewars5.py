@@ -99,24 +99,59 @@ Trailing spaces should be removed, and every line must be terminated with a newl
 
 
 def diamond(n):
-    res = None
-    if n > 0 and n % 2 != 0:
-        res = ""
-        ws = n // 2
-        for i in range(1, n + 1, 2):
-            res += " " * ws
-            res += '*' * i
-            res += '\n'
-            ws -= 1
-        ws += 2
-        for i in range(n - 2, 0, -2):
-            res += " " * ws
-            res += '*' * i
-            res += '\n'
-            ws += 1
+    if n < 1 or n % 2 == 0:
+        return None  # validate input
+    res = ""         # initialize result string
+    space = n // 2
+    for i in range(1, n, 2):
+        res += " " * space
+        res += '*' * i
+        res += '\n'
+        space -= 1
+    for i in range(n, 0, -2):
+        res += " " * space
+        res += '*' * i
+        res += '\n'
+        space += 1
     return res
 
 
-print(diamond(3))
 print(diamond(5))
-print(diamond(1))
+
+
+"""
+Create a function that takes a string and returns the string ciphered with Rot13. If there are numbers or special
+characters included in the string, they should be returned as they are. Only letters from the latin/english alphabet 
+should be shifted, like in the original Rot13 "implementation".
+"""
+
+
+def rot13(message):
+    res = ''
+    for c in message:
+        if c.isalpha():
+            if ord(c) <= 77:
+                c = chr(ord(c) + 13)
+                res += c
+            elif ord(c) <= 90:
+                c = chr(ord(c) - 13)
+                res += c
+            elif ord(c) <= 109:
+                c = chr(ord(c) + 13)
+                res += c
+            else:
+                c = chr(ord(c) - 13)
+                res += c
+        else:
+            res += c
+    return res
+
+
+# def rot13(message):
+#     abc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+#     cba = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
+#     mytable = message.maketrans(abc, cba)
+#     return message.translate(mytable)
+
+
+print(rot13("aA bB zZ 1234 *!?%"))
