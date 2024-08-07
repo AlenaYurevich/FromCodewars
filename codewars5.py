@@ -155,3 +155,24 @@ def rot13(message):
 
 
 print(rot13("aA bB zZ 1234 *!?%"))
+
+
+"""
+In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+If anything in the text isn't a letter, ignore it and don't return it.
+"""
+
+
+def alphabet_position(text):
+    # alfabet = "-abcdefghijklmnopqrstuvwxyz"
+    # res = []
+    # for i in text:
+    #     if i.lower() in alfabet:
+    #         i = alfabet.index(i.lower())
+    #         res.append(str(i))
+    # return ' '.join(res)
+    return ' '.join(str(ord(c) - 96) for c in text.lower() if c.isalpha())
+
+
+print(alphabet_position("The sunset sets at "))
+
