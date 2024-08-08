@@ -4,7 +4,7 @@ faces.
 Rules for a smiling face:
 Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
 A smiley face can have a nose, but it does not have to. Valid characters for a nose are - or ~
-Every smiling face must have a smiling mouth that should be marked with either ) or D
+Every smiling face must have a smiling mouth that should be marked with either ')' or D
 No additional characters are allowed except for those mentioned.
 Valid smiley face examples: :) :D ;-D :~)
 Invalid smiley faces: ;( :> :} :]
@@ -17,20 +17,20 @@ def count_smileys(arr):
     return len(list(re.findall(r"[:;][-~]?[)D]", " ".join(arr))))
 
 
-result = re.match(r'AV', 'AV Analytics Vidhya AV')
+result = re.match(r'AV', 'AV Analytics AV')
 print(result.start())
 print(result.end())
 
-result = re.search(r'AV', 'AV Analytics Vidhya AV')
+result = re.search(r'AV', 'AV Analytics AV')
 print(result.group(0))
 
-result = re.findall(r'AV', 'AV Analytics Vidhya AV')
+result = re.findall(r'AV', 'AV Analytics AV')
 print(result)
 
 result = re.split(r'y', 'Analytics')
 print(result)
 
-result = re.split(r'i', 'Analytics Vidhya', maxsplit=1)
+result = re.split(r'i', 'Analytics', maxsplit=1)
 print(result)
 
 result = re.sub(r'India', 'World', 'AV is largest Analytics community of India')
@@ -176,3 +176,42 @@ def alphabet_position(text):
 
 print(alphabet_position("The sunset sets at "))
 
+
+"""
+Messi is a soccer player with goals in three leagues:
+LaLiga
+Copa del Rey
+Champions
+Complete the function to return his total number of goals in all three leagues.
+Note: the input will always be valid.
+For example: 5, 10, 2  -->  17
+"""
+
+
+# def goals(laLiga, copaDelRey, championsLeague):
+#     return sum([laLiga, copaDelRey, championsLeague])
+
+
+def goals(*args):
+    return sum(args)
+
+
+"""
+Numbers ending with zeros are boring. They might be fun in your world, but not here.
+Get rid of them. Only the ending ones.
+1450 -> 145
+960000 -> 96
+1050 -> 105
+-1050 -> -105
+Zero alone is fine, don't worry about it. Poor guy anyway
+"""
+
+
+def no_boring_zeros(n):
+    try:
+        return int(str(n).rstrip("0"))
+    except ValueError:
+        return n
+
+
+print(no_boring_zeros(9606000))
