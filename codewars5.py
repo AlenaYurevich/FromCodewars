@@ -215,3 +215,17 @@ def no_boring_zeros(n):
 
 
 print(no_boring_zeros(9606000))
+
+
+"""
+Complete function sale_hotdogs, function accepts 1 parameter:n, n is the number of hotdogs a customer will buy,
+different numbers have different prices (refer to the following table), return how much money will the customer spend
+to buy that number of hotdogs.
+"""
+
+
+def sale_hotdogs(n):
+    return n * (100 if n < 5 else 95 if n < 10 else 90)
+
+
+print(sale_hotdogs(100))
