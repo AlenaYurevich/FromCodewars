@@ -218,7 +218,7 @@ print(no_boring_zeros(9606000))
 
 
 """
-Complete function sale_hotdogs, function accepts 1 parameter:n, n is the number of hotdogs a customer will buy,
+Complete function sale_hotdogs, function accepts 1 parameter: n, n is the number of hotdogs a customer will buy,
 different numbers have different prices (refer to the following table), return how much money will the customer spend
 to buy that number of hotdogs.
 """
@@ -229,3 +229,19 @@ def sale_hotdogs(n):
 
 
 print(sale_hotdogs(100))
+
+
+"""
+Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each
+of the following phrases each time a petal was torn:
+"""
+
+
+def how_much_i_love_you(nb_petals):
+    di = {1: "I love you",
+          2: "a little",
+          3: "a lot",
+          4: "passionately",
+          5: "madly",
+          0: "not at all"}
+    return di[nb_petals % 6]
