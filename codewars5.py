@@ -278,3 +278,26 @@ def duplicate_count(text):
 
 
 print(duplicate_count("Indivisibilities"))
+
+
+"""
+A child is playing with a ball on the nth floor of a tall building. The height of this floor above ground level, h, is
+known.He drops the ball out of the window. The ball bounces (for example), to two-thirds of its height
+(a bounce of 0.66). His mother looks out of a window 1.5 meters from the ground.
+How many times will the mother see the ball pass in front of her window (including when it's falling and bouncing)?
+"""
+
+
+def bouncing_ball(h, bounce, window):
+    counter = -1
+    if 0 < bounce < 1:
+        while h > window:
+            print(h * bounce)
+            counter += 2
+            h *= bounce
+    return counter
+
+
+print(bouncing_ball(2, 0.5, 1))
+print(bouncing_ball(3, 0.66, 1.5))
+print(bouncing_ball(30, 0.66, 1.5))
