@@ -263,3 +263,18 @@ For example: month 2 (February), is part of the first quarter; month 6 (June), i
 
 def quarter_of(month):
     return 1 if month <= 3 else 2 if month <= 6 else 3 if month <= 9 else 4
+
+
+"""
+Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that
+occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and
+lowercase) and numeric digits.
+"""
+
+
+def duplicate_count(text):
+    t = text.lower()
+    return len([i for i in set(t) if t.count(i) > 1])
+
+
+print(duplicate_count("Indivisibilities"))
