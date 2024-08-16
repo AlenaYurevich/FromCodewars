@@ -228,7 +228,7 @@ def sale_hotdogs(n):
     return n * (100 if n < 5 else 95 if n < 10 else 90)
 
 
-print(sale_hotdogs(100))
+# print(sale_hotdogs(100))
 
 
 """
@@ -277,7 +277,7 @@ def duplicate_count(text):
     return len([i for i in set(t) if t.count(i) > 1])
 
 
-print(duplicate_count("Indivisibilities"))
+# print(duplicate_count("Indivisibilities"))
 
 
 """
@@ -297,7 +297,41 @@ def bouncing_ball(h, bounce, window):
             h *= bounce
     return counter
 
+#
+# print(bouncing_ball(2, 0.5, 1))
+# print(bouncing_ball(3, 0.66, 1.5))
+# print(bouncing_ball(30, 0.66, 1.5))
 
-print(bouncing_ball(2, 0.5, 1))
-print(bouncing_ball(3, 0.66, 1.5))
-print(bouncing_ball(30, 0.66, 1.5))
+
+"""
+You will be given an array and a limit value. You must check that all values in the array are below or equal to the 
+limit value. If they are, return true. Else, return false.
+You can assume all values in the array are numbers.
+"""
+
+
+# def small_enough(array, limit):
+#     return len(array) == len([i for i in array if i <= limit])
+
+
+def small_enough(array, limit):
+    return max(array) <= limit
+
+
+print(small_enough([78, 117, 110, 99, 104, 117, 107, 115], 100))
+
+
+"""
+Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements 
+but with the 'geese' removed.
+"""
+    
+
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+
+
+def goose_filter(birds):
+    return [bird for bird in birds if bird not in geese]
+
+
+print(goose_filter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
