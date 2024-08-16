@@ -334,4 +334,16 @@ def goose_filter(birds):
     return [bird for bird in birds if bird not in geese]
 
 
-print(goose_filter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
+# print(goose_filter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
+
+
+"""
+Given a string str, reverse it and omit all non-alphabetic characters.
+"""
+
+
+def reverse_letter(st):
+    return "".join(i for i in st[::-1] if i.isalpha())
+
+
+print(reverse_letter("ultr53o?n"))
